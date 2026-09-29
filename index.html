@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qalin School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <span>Q</span>
+        <div>
+            <strong>Qalin</strong>
+            <small>School</small>
+        </div>
+    </a>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="mainMenu">
+
+        <a href="index.html" data-so="Hoyga" data-en="Home">Hoyga</a>
+
+        <a href="#about"
+           data-so="Nagu Saabsan"
+           data-en="About Us">Nagu Saabsan</a>
+
+        <a href="admission.html"
+           data-so="Diiwaangelin"
+           data-en="Admission">Diiwaangelin</a>
+
+        <a href="teachers.html"
+           data-so="Macallimiinta"
+           data-en="Teachers">Macallimiinta</a>
+
+        <a href="#contact"
+           data-so="Xiriir"
+           data-en="Contact">Xiriir</a>
+
+        <div class="menu-tools">
+
+            <button onclick="changeLanguage()" id="languageBtn">
+                🇬🇧 English
+            </button>
+
+            <button onclick="toggleTheme()" id="themeBtn">
+                🌙
+            </button>
+
+            <button class="admin-link" onclick="openAdminLogin()">
+                🔐 Admin
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            🎓 <span data-so="Ku soo dhawoow Qalin School"
+                      data-en="Welcome to Qalin School">
+                Ku soo dhawoow Qalin School
+            </span>
+        </div>
+
+        <h1>
+            <span data-so="Waxbarasho"
+                  data-en="Education">
+                Waxbarasho
+            </span>
+
+            <strong data-so="Tayo Leh."
+                    data-en="That Inspires.">
+                Tayo Leh.
+            </strong>
+        </h1>
+
+        <p data-so="Qalin School waa dugsi casri ah oo ardayda siiya aqoon, akhlaaq iyo xirfado ay mustaqbalkooda ku dhistaan."
+           data-en="Qalin School is a modern school providing students with knowledge, character and skills for a successful future.">
+            Qalin School waa dugsi casri ah oo ardayda siiya aqoon,
+            akhlaaq iyo xirfado ay mustaqbalkooda ku dhistaan.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="admission.html" class="btn-primary"
+               data-so="Diiwaangeli Arday"
+               data-en="Register Student">
+                Diiwaangeli Arday
+            </a>
+
+            <a href="students.html" class="btn-outline"
+               data-so="Eeg Ardayda"
+               data-en="View Students">
+                Eeg Ardayda
+            </a>
+
+        </div>
+
+        <div class="hero-mini">
+
+            <div>
+                <b>✓</b>
+                <span data-so="Macallimiin khibrad leh"
+                      data-en="Experienced Teachers">
+                    Macallimiin khibrad leh
+                </span>
+            </div>
+
+            <div>
+                <b>✓</b>
+                <span data-so="Waxbarasho casri ah"
+                      data-en="Modern Education">
+                    Waxbarasho casri ah
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+
+        <div class="school-card">
+
+            <div class="school-icon">🎓</div>
+
+            <h2>QALIN</h2>
+
+            <p>SCHOOL</p>
+
+            <div class="card-line"></div>
+
+            <span data-so="Aqoon • Akhlaaq • Mustaqbal"
+                  data-en="Knowledge • Character • Future">
+                Aqoon • Akhlaaq • Mustaqbal
+            </span>
+
+        </div>
+
+        <div class="floating-card card-student">
+            👨‍🎓
+            <div>
+                <b id="studentCount">0</b>
+                <small data-so="Arday"
+                       data-en="Students">Arday</small>
+            </div>
+        </div>
+
+        <div class="floating-card card-teacher">
+            👨‍🏫
+            <div>
+                <b id="teacherCount">0</b>
+                <small data-so="Macallimiin"
+                       data-en="Teachers">Macallimiin</small>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="stats">
+
+    <div class="stat">
+        <span>👨‍🎓</span>
+        <strong id="statStudents">0</strong>
+        <p data-so="Arday" data-en="Students">Arday</p>
+    </div>
+
+    <div class="stat">
+        <span>👨‍🏫</span>
+        <strong id="statTeachers">0</strong>
+        <p data-so="Macallimiin" data-en="Teachers">Macallimiin</p>
+    </div>
+
+    <div class="stat">
+        <span>📚</span>
+        <strong>20+</strong>
+        <p data-so="Maadooyin" data-en="Subjects">Maadooyin</p>
+    </div>
+
+    <div class="stat">
+        <span>🏆</span>
+        <strong>100%</strong>
+        <p data-so="Dadaal" data-en="Commitment">Dadaal</p>
+    </div>
+
+</section>
+
+
+<section id="about" class="section about">
+
+    <div class="section-heading">
+
+        <span data-so="NAGU SAABSAN"
+              data-en="ABOUT US">
+            NAGU SAABSAN
+        </span>
+
+        <h2 data-so="Waxaan Dhiseynaa Mustaqbalka"
+            data-en="We Are Building The Future">
+            Waxaan Dhiseynaa Mustaqbalka
+        </h2>
+
+        <p data-so="Waxbarashadu waa furaha horumarka. Qalin School waxay isku darsataa aqoon iyo xirfado casri ah."
+           data-en="Education is the key to progress. Qalin School combines knowledge with modern skills.">
+            Waxbarashadu waa furaha horumarka.
+            Qalin School waxay isku darsataa aqoon iyo xirfado casri ah.
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-main">
+
+            <div class="about-number">01</div>
+
+            <h3 data-so="Waxbarasho Tayo Leh"
+                data-en="Quality Education">
+                Waxbarasho Tayo Leh
+            </h3>
+
+            <p data-so="Waxaan abuurnaa jawi ardaygu ku baran karo, ku fikiri karo kuna horumari karo."
+               data-en="We create an environment where students can learn, think and grow.">
+                Waxaan abuurnaa jawi ardaygu ku baran karo,
+                ku fikiri karo kuna horumari karo.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <div class="big-icon">📖</div>
+
+            <h3 data-so="Aqoon"
+                data-en="Knowledge">
+                Aqoon
+            </h3>
+
+            <p data-so="Baro wax cusub maalin kasta."
+               data-en="Learn something new every day.">
+                Baro wax cusub maalin kasta.
+            </p>
+
+        </div>
+
+
+        <div class="about-box purple">
+
+            <div class="big-icon">💡</div>
+
+            <h3 data-so="Hal-abuur"
+                data-en="Innovation">
+                Hal-abuur
+            </h3>
+
+            <p data-so="Fikir cusub iyo xirfado cusub."
+               data-en="New ideas and modern skills.">
+                Fikir cusub iyo xirfado cusub.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="services section">
+
+    <div class="section-heading">
+
+        <span data-so="ADEEGYADA"
+              data-en="SERVICES">
+            ADEEGYADA
+        </span>
+
+        <h2 data-so="Wax kasta oo School-ku u baahan yahay"
+            data-en="Everything A School Needs">
+            Wax kasta oo School-ku u baahan yahay
+        </h2>
+
+    </div>
+
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <span>👨‍🎓</span>
+            <h3 data-so="Maamulka Ardayda"
+                data-en="Student Management">
+                Maamulka Ardayda
+            </h3>
+            <p data-so="Xogta ardayda si nidaamsan."
+               data-en="Organized student information.">
+                Xogta ardayda si nidaamsan.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <span>👨‍🏫</span>
+            <h3 data-so="Maamulka Macallimiinta"
+                data-en="Teacher Management">
+                Maamulka Macallimiinta
+            </h3>
+            <p data-so="Macallimiinta iyo maadooyinkooda."
+               data-en="Teachers and their subjects.">
+                Macallimiinta iyo maadooyinkooda.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <span>📊</span>
+            <h3 data-so="Attendance"
+                data-en="Attendance">
+                Attendance
+            </h3>
+            <p data-so="La soco imaanshaha ardayda."
+               data-en="Track student attendance.">
+                La soco imaanshaha ardayda.
+            </p>
+        </div>
+
+
+        <div class="service-card">
+            <span>📢</span>
+            <h3 data-so="Ogeysiisyo"
+                data-en="Announcements">
+                Ogeysiisyo
+            </h3>
+            <p data-so="Wararka iyo ogeysiisyada school-ka."
+               data-en="School news and announcements.">
+                Wararka iyo ogeysiisyada school-ka.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contact" class="contact-section">
+
+    <div class="section-heading">
+
+        <span data-so="XIRIIR"
+              data-en="CONTACT">
+            XIRIIR
+        </span>
+
+        <h2 data-so="Nala Soo Xiriir"
+            data-en="Contact Us">
+            Nala Soo Xiriir
+        </h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div>
+            <span>📞</span>
+            <h3 data-so="Telefoon"
+                data-en="Phone" +251961100473>
+                Telefoon
+            </h3>
+            <p id="schoolPhone">Not set</p>
+        </div>
+
+
+        <div>
+            <span>✉️</span>
+            <h3>Email</h3>
+            <p id="schoolEmail">qalinschool@email.
+
+            </p>
+        </div>
+
+
+        <div>
+            <span>📍</span>
+            <h3 data-so="Goobta"
+                data-en="Location">
+                Goobta
+            </h3>
+            <p id="schoolLocation">jigjiga keyla</p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        <span>Q</span>
+        <b>Qalin School</b>
+    </div>
+
+    <p data-so="Waxbarasho dhisaysa jiilka berri."
+       data-en="Education building tomorrow's generation.">
+        Waxbarasho dhisaysa jiilka berri.
+    </p>
+
+    <div class="footer-bottom">
+        © <span id="year"></span> Qalin School
+    </div>
+
+</footer>
+
+
+<!-- ADMIN LOGIN -->
+
+<div id="adminModal" class="modal">
+
+    <div class="login-box">
+
+        <button class="close-modal" onclick="closeAdminLogin()">×</button>
+
+        <div class="login-icon">🔐</div>
+
+        <h2 data-so="Admin Login"
+            data-en="Admin Login">
+            Admin Login
+        </h2>
+
+        <p data-so="Geli password-ka maamulka"
+           data-en="Enter the administrator password">
+            Geli password-ka maamulka
+        </p>
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password"
+        >
+
+        <button class="login-submit" onclick="adminLogin()"
+                data-so="Gal Dashboard"
+                data-en="Enter Dashboard">
+            Gal Dashboard
+        </button>
+
+        <div id="loginMessage"></div>
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students - Qalin School</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <span>Q</span>
+        <div>
+            <strong>Qalin</strong>
+            <small>School</small>
+        </div>
+    </a>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="mainMenu">
+
+        <a href="index.html">Hoyga</a>
+        <a href="students.html" class="active">Ardayda</a>
+        <a href="teachers.html">Macallimiinta</a>
+        <a href="admission.html">Diiwaangelin</a>
+
+        <div class="menu-tools">
+            <button onclick="changeLanguage()" id="languageBtn">
+                 English
+            </button>
+
+            <button onclick="toggleTheme()" id="themeBtn">
+                🌙
+            </button>
+
+            <button class="admin-link" onclick="openAdminLogin()">
+                🔐 Admin
+            </button>
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="page-hero">
+
+    <span>👨‍🎓</span>
+
+    <h1 data-so="Ardayda"
+        data-en="Students">
+        Ardayda
+    </h1>
+
+    <p data-so="Halkan waxaa lagu arki karaa xogta ardayda."
+       data-en="Student information can be viewed here.">
+        Halkan waxaa lagu arki karaa xogta ardayda.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="private-notice">
+
+        🔒
+
+        <div>
+            <h3 data-so="Xogta ardayda waa gaar"
+                data-en="Student information is private">
+                Xogta ardayda waa gaar
+            </h3>
+
+            <p data-so="Faahfaahinta buuxda waxaa geli kara oo keliya maamulka."
+               data-en="Full details can only be accessed by administrators.">
+                Faahfaahinta buuxda waxaa geli kara oo keliya maamulka.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="student-search">
+
+        <input
+            type="search"
+            id="studentSearch"
+            placeholder="Search student..."
+            onkeyup="searchStudents()"
+        >
+
+        <button onclick="openAdminLogin()">
+            🔐 Admin
+        </button>
+
+    </div>
+
+
+    <div id="studentsList" class="student-grid">
+
+        <div class="student-placeholder">
+
+            👨‍🎓
+
+            <h3 data-so="Xogta ardayda"
+                data-en="Student Records">
+                Xogta ardayda
+            </h3>
+
+            <p data-so="Admin-ka kaliya ayaa arki kara faahfaahinta buuxda."
+               data-en="Only administrators can view full details.">
+                Admin-ka kaliya ayaa arki kara faahfaahinta buuxda.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    © <span id="year"></span> Qalin School
+</footer>
+
+
+<div id="adminModal" class="modal">
+
+    <div class="login-box">
+
+        <button class="close-modal" onclick="closeAdminLogin()">×</button>
+
+        <div class="login-icon">🔐</div>
+
+        <h2>Admin Login</h2>
+
+        <p>Geli password-ka maamulka</p>
+
+        <input type="password" id="adminPassword">
+
+        <button class="login-submit" onclick="adminLogin()">
+            Gal Dashboard
+        </button>
+
+        <div id="loginMessage"></div>
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="so">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Teachers - Qalin School</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <span>Q</span>
+
+        <div>
+            <strong>Qalin</strong>
+            <small>School</small>
+        </div>
+    </a>
+
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </button>
+
+
+    <nav id="mainMenu">
+
+        <a href="index.html">Hoyga</a>
+
+        <a href="students.html">Ardayda</a>
+
+        <a href="teachers.html" class="active">
+            Macallimiinta
+        </a>
+
+        <a href="admission.html">
+            Diiwaangelin
+        </a>
+
+
+        <div class="menu-tools">
+
+            <button onclick="changeLanguage()" id="languageBtn">
+                🇬🇧 English
+            </button>
+
+            <button onclick="toggleTheme()" id="themeBtn">
+                🌙
+            </button>
+
+            <button class="admin-link"
+                    onclick="openAdminLogin()">
+                🔐 Admin
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="page-hero">
+
+    <span>👨‍🏫</span>
+
+    <h1 data-so="Macallimiinta"
+        data-en="Teachers">
+        Macallimiinta
+    </h1>
+
+    <p data-so="La kulan macallimiinta Qalin School."
+       data-en="Meet the teachers of Qalin School.">
+        La kulan macallimiinta Qalin School.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div id="teachersList" class="teacher-grid">
+
+        <div class="teacher-card">
+
+            <div class="teacher-avatar">
+                👨‍🏫
+            </div>
+
+            <h3 data-so="Macallin"
+                data-en="Teacher">
+                Macallin
+            </h3>
+
+            <p data-so="Xogta waxaa maamula Admin."
+               data-en="Information is managed by Admin.">
+                Xogta waxaa maamula Admin.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    © <span id="year"></span> Qalin School
+</footer>
+
+
+<div id="adminModal" class="modal">
+
+    <div class="login-box">
+
+        <button class="close-modal"
+                onclick="closeAdminLogin()">
+            ×
+        </button>
+
+        <div class="login-icon">🔐</div>
+
+        <h2>Admin Login</h2>
+
+        <p>Geli password-ka maamulka</p>
+
+        <input type="password" id="adminPassword">
+
+        <button class="login-submit"
+                onclick="adminLogin()">
+            Gal Dashboard
+        </button>
+
+        <div id="loginMessage"></div>
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="so">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admission - Qalin School</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <span>Q</span>
+
+        <div>
+            <strong>Qalin</strong>
+            <small>School</small>
+        </div>
+    </a>
+
+
+    <button class="menu-toggle"
+            onclick="toggleMenu()">
+        ☰
+    </button>
+
+
+    <nav id="mainMenu">
+
+        <a href="index.html">Hoyga</a>
+
+        <a href="students.html">Ardayda</a>
+
+        <a href="teachers.html">Macallimiinta</a>
+
+        <a href="admission.html"
+           class="active">
+            Diiwaangelin
+        </a>
+
+
+        <div class="menu-tools">
+
+            <button onclick="changeLanguage()"
+                    id="languageBtn">
+                🇬🇧 English
+            </button>
+
+            <button onclick="toggleTheme()"
+                    id="themeBtn">
+                🌙
+            </button>
+
+            <button class="admin-link"
+                    onclick="openAdminLogin()">
+                🔐 Admin
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="page-hero">
+
+    <span>📝</span>
+
+    <h1 data-so="Diiwaangelinta Ardayga"
+        data-en="Student Admission">
+        Diiwaangelinta Ardayga
+    </h1>
+
+    <p data-so="Buuxi xogta ardayga si aad u codsato diiwaangelin."
+       data-en="Complete the student information to apply for admission.">
+        Buuxi xogta ardayga si aad u codsato diiwaangelin.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <form id="studentForm"
+          class="admission-form">
+
+        <div class="form-title">
+
+            <h2 data-so="Student Registration"
+                data-en="Student Registration">
+                Student Registration
+            </h2>
+
+            <p data-so="Fadlan geli xogta saxda ah."
+               data-en="Please enter accurate information.">
+                Fadlan geli xogta saxda ah.
+            </p>
+
+        </div>
+
+
+        <div class="form-grid">
+
+            <div>
+                <label data-so="Magaca oo buuxa"
+                       data-en="Full Name">
+                    Magaca oo buuxa
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    required
+                    placeholder="Full name">
+            </div>
+
+
+            <div>
+                <label data-so="Telefoon"
+                       data-en="Phone">
+                    Telefoon
+                </label>
+
+                <input
+                    type="tel"
+                    id="studentPhone"
+                    required
+                    placeholder="Phone">
+            </div>
+
+
+            <div>
+                <label data-so="Fasalka"
+                       data-en="Class">
+                    Fasalka
+                </label>
+
+                <select id="studentClass"
+                        required>
+
+                    <option value="">
+                        Select Class
+                    </option>
+
+                    <option>Grade 1</option>
+                    <option>Grade 2</option>
+                    <option>Grade 3</option>
+                    <option>Grade 4</option>
+                    <option>Grade 5</option>
+                    <option>Grade 6</option>
+                    <option>Grade 7</option>
+                    <option>Grade 8</option>
+
+                </select>
+
+            </div>
+
+
+            <div>
+
+                <label data-so="Jinsi"
+                       data-en="Gender">
+                    Jinsi
+                </label>
+
+                <select id="studentGender"
+                        required>
+
+                    <option value="">
+                        Select Gender
+                    </option>
+
+                    <option>Male</option>
+                    <option>Female</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="full">
+
+                <label data-so="Cinwaanka"
+                       data-en="Address">
+                    Cinwaanka
+                </label>
+
+                <input
+                    type="text"
+                    id="studentAddress"
+                    placeholder="Address">
+
+            </div>
+
+        </div>
+
+
+        <button class="btn-primary form-submit"
+                type="submit"
+                data-so="Gudbi Diiwaangelinta"
+                data-en="Submit Registration">
+            Gudbi Diiwaangelinta
+        </button>
+
+    </form>
+
+</section>
+
+
+<footer>
+    © <span id="year"></span> Qalin School
+</footer>
+
+
+<div id="adminModal" class="modal">
+
+    <div class="login-box">
+
+        <button class="close-modal"
+                onclick="closeAdminLogin()">
+            ×
+        </button>
+
+        <div class="login-icon">🔐</div>
+
+        <h2>Admin Login</h2>
+
+        <p>Geli password-ka maamulka</p>
+
+        <input type="password"
+               id="adminPassword">
+
+        <button class="login-submit"
+                onclick="adminLogin()">
+            Gal Dashboard
+        </button>
+
+        <div id="loginMessage"></div>
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="so">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Qalin School</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="admin-page">
+
+
+<header class="admin-top">
+
+    <a href="index.html" class="logo">
+        <span>Q</span>
+
+        <div>
+            <strong>Qalin</strong>
+            <small>Admin</small>
+        </div>
+    </a>
+
+
+    <div class="admin-top-actions">
+
+        <button onclick="changeLanguage()"
+                id="languageBtn">
+            🇬🇧 English
+        </button>
+
+        <button onclick="toggleTheme()"
+                id="themeBtn">
+            🌙
+        </button>
+
+        <button onclick="adminLogout()">
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-title">
+            ADMIN MENU
+        </div>
+
+
+        <button onclick="showDashboard('dashboardHome')">
+            📊 Dashboard
+        </button>
+
+        <button onclick="showDashboard('studentsAdmin')">
+            👨‍🎓 Students
+        </button>
+
+        <button onclick="showDashboard('teachersAdmin')">
+            👨‍🏫 Teachers
+        </button>
+
+        <button onclick="showDashboard('attendanceAdmin')">
+            📋 Attendance
+        </button>
+
+        <button onclick="showDashboard('lessonsAdmin')">
+            📚 Lessons
+        </button>
+
+        <button onclick="showDashboard('announcementsAdmin')">
+            📢 Announcements
+        </button>
+
+        <button onclick="showDashboard('settingsAdmin')">
+            ⚙️ School Settings
+        </button>
+
+    </aside>
+
+
+    <main class="dashboard-content">
+
+
+        <section id="dashboardHome"
+                 class="dashboard-section">
+
+            <div class="dashboard-heading">
+
+                <div>
+                    <span>ADMINISTRATION</span>
+
+                    <h1 data-so="Dashboard"
+                        data-en="Dashboard">
+                        Dashboard
+                    </h1>
+                </div>
+
+                <span class="online">
+                    ● ONLINE
+                </span>
+
+            </div>
+
+
+            <div class="dashboard-cards">
+
+                <div>
+                    <span>👨‍🎓</span>
+                    <small>Students</small>
+                    <strong id="adminStudentCount">0</strong>
+                </div>
+
+                <div>
+                    <span>👨‍🏫</span>
+                    <small>Teachers</small>
+                    <strong id="adminTeacherCount">0</strong>
+                </div>
+
+                <div>
+                    <span>📋</span>
+                    <small>Attendance</small>
+                    <strong>0</strong>
+                </div>
+
+                <div>
+                    <span>📚</span>
+                    <small>Lessons</small>
+                    <strong>0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="welcome-admin">
+
+                <h2>
+                    👋 Welcome Admin
+                </h2>
+
+                <p>
+                    Halkan waxaad ka maamuli kartaa
+                    xogta Qalin School.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="studentsAdmin"
+                 class="dashboard-section hidden">
+
+            <h1>👨‍🎓 Students Management</h1>
+
+            <div class="admin-table">
+
+                <div class="empty-admin">
+                    Student records waxay halkan kasoo muuqan doonaan.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="teachersAdmin"
+                 class="dashboard-section hidden">
+
+            <h1>👨‍🏫 Teachers Management</h1>
+
+            <div class="admin-form">
+
+                <input
+                    id="teacherName"
+                    placeholder="Teacher name">
+
+                <input
+                    id="teacherSubject"
+                    placeholder="Subject">
+
+                <input
+                    id="teacherPhone"
+                    placeholder="Phone">
+
+                <button onclick="addTeacher()">
+                    + Add Teacher
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section id="attendanceAdmin"
+                 class="dashboard-section hidden">
+
+            <h1>📋 Attendance</h1>
+
+            <div class="attendance-box">
+
+                <h3>
+                    Student Attendance
+                </h3>
+
+                <p>
+                    Present: 0
+                </p>
+
+                <p>
+                    Absent: 0
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="lessonsAdmin"
+                 class="dashboard-section hidden">
+
+            <h1>📚 Lessons</h1>
+
+            <div class="admin-form">
+
+                <input
+                    placeholder="Lesson name">
+
+                <input
+                    placeholder="Teacher">
+
+                <input
+                    placeholder="Class">
+
+                <button>
+                    + Add Lesson
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section id="announcementsAdmin"
+                 class="dashboard-section hidden">
+
+            <h1>📢 Announcements</h1>
+
+            <div class="admin-form">
+
+                <input
+                    id="announcementTitle"
+                    placeholder="Announcement title">
+
+                <textarea
+                    id="announcementText"
+                    placeholder="Announcement text">
+                </textarea>
+
+                <button onclick="addAnnouncement()">
+                    Publish
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section id="settingsAdmin"
+                 class="dashboard-section hidden">
+
+            <h1>⚙️ School Settings</h1>
+
+            <div class="admin-form">
+
+                <label>School Phone</label>
+
+                <input
+                    id="settingPhone"
+                    placeholder="School phone">
+
+
+                <label>School Email</label>
+
+                <input
+                    id="settingEmail"
+                    placeholder="School email">
+
+
+                <label>School Location</label>
+
+                <input
+                    id="settingLocation"
+                    placeholder="School location">
+
+
+                <button onclick="saveSettings()">
+                    Save Changes
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="app.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    if (sessionStorage.getItem("qalinAdmin") !== "true") {
+
+        window.location.href = "index.html";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
